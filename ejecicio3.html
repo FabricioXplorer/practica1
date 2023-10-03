@@ -11,26 +11,28 @@
 </html>
 <script>
     alert("Vista De Los Ejercicios")
-    function Mostrar(num1,num2){
-
-        document.write("Resultado: ",resultado);
-        document.write("<br>"); 
+    function Mostrar(){
+        document.write("<br>");     
+        document.write("Resultado: ",resultado,);
+        document.write("<br>");  
     }
 
     function suma (num1,num2){
         return num1+num2;
-        
+        document.write("Suma: 3+5");
     }
+    
     var resultado=suma(3,5);
-    Mostrar();
+    Mostrar(suma);
 ///////////////////////////////////////////
    
     function resta (num1,num2){
         return num1-num2;
         
     }
+    document.write("Resta: 5-5");
     var resultado=resta(5,5);
-    Mostrar(num1,num2);
+    Mostrar(resta);
     
 ///////////////////////////////////////////
 
@@ -38,16 +40,18 @@
         return num1*num2;
         
     }
+    document.write("Multiplicacion: 3*5");
     var resultado=multiplicacion(3,5);
-    
+    Mostrar(multiplicacion);
 ///////////////////////////////////////////
 
     function division (num1,num2){
         return num1/num2;
         
     }
+    document.write("DIvision: 15/5");
     var resultado=division(15,5);
-    
+    Mostrar(division);
    
 ///////////////////////////////////////////
 
@@ -55,7 +59,7 @@
         return num1*num1;
         
     }
+    document.write("Cuadrado: 3*3");
     var resultado=cuadrado(3,3);
-   
-   
+    Mostrar(cuadrado);
 </script>

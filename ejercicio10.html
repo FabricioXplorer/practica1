@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 10</title>
+</head>
+<body>
+    <center><h1>uso de vectores</h1></center>
+</body>
+</html>
+<script>
+    function salto_de_linea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostrarmensaje(mensaje){
+        document.write(mensaje);
+        salto_de_linea();
+    }
+var Materias = [];
+var cantidad = parseInt(prompt("cuantas materias desea ingresar para el area de Sistemas"));
+var cont = 1;
+while(cont<=cantidad){
+    var MateriaIntroducida = prompt("Materia a Registrar");
+    
+    Materias.push(MateriaIntroducida);
+    cont++;
+    document.write(Materias)
+    salto_de_linea();
+}
+
+console.log(Materias)
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <center><h1>Juego Nuevo</h1></center>
+</body>
+</html>
+<script>
+       function salto_de_linea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostrarmensaje(mensaje){
+        document.write(mensaje);
+        salto_de_linea();
+    }
+////este pequeño juego muestra un rango de palabras la cual se tiene que identificar o adivinar en unos 3 intentos
+    let letra= ["b","c","d","e","f"]
+    var cont = Math.round(Math.random()*4)
+    var intento=3;
+    var contador=1;
+    console.log(cont);
+    while(contador<=intento){
+        var letraintroducida= prompt("ingresa una de las  5 letras que estan despues de la A ")
+        if(letraintroducida==letra[cont]){
+            alert("Adivinaste la Letra correcta "+contador+" La letra es: "+letra[cont]);
+            break;
+        }
+        else{
+            alert("Perdedor")
+        }
+        contador++;
+    }
+    alert("Fin")
+</script>

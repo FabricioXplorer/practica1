@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion 1</title>
+</head>
+<body>
+    <center><h1>Tesoro de un Mapa</h1></center>
+</body>
+</html>
+
+<center><script>
+    
+      
+    function salto_de_linea() {
+            document.write("<br>");
+        }
+
+        function mostrarmensaje(mensaje) {
+            document.write(mensaje);
+            salto_de_linea();
+        }
+
+        var matriz5x5 = [
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 1],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0]
+        ];
+        var mapa = "El Tesoro del Mapa ";
+        mostrarmensaje(mapa);
+
+        for (var i = 0; i < matriz5x5.length; i++) {
+            document.write(matriz5x5[i]);
+            salto_de_linea();
+        }
+
+        var intento = 3;
+        var contador = 1;
+
+        while (contador <= intento) {
+            //este alert nos mostrara una pequeña adivinanza del tesoro para que podamos encontrar el uno que esta dentro de la matriz
+            alert("En una matriz, miro con atención,un tesoro oculto, mi obsesión.En la fila de en medio estoy parado,en la última columna he sido ubicado.Mis vecinos son ceros, excepto uno,y ese es el número que debes encontrar, ninguno.Así que adivina con destreza y sin temor¿en qué fila y columna estoy yo, el valor del tesoro sabiendo que tengo una matriz 5x5?")
+            var fila = parseInt(prompt("Adivina la fila donde se esconde el numero 1 y encontraras el tesoro (0-4):"));
+            var columna = parseInt(prompt("Adivina la columna donde se esconde el número 1 y encontraras el tesoro (0-4):"));
+
+            if (fila >= 0 && fila < matriz5x5.length && columna >= 0 && columna < matriz5x5[0].length) {
+                if (matriz5x5[fila][columna] == 1) {
+                    alert("¡Adivinaste la ubicación del numero 1 Encontraste el tesoro! Ganaste.");
+                    break;
+                } else {
+                    alert("Intento " + contador + ": No hay un 1 en esa ubicación, no hay Tesoro. Sigue intentando.");
+                }
+            } else {
+                alert("Las ubicaciones ingresadas no son validas. Deben estar en el rango 0-4.");
+            }
+
+            contador++;
+        }
+</script></center>
